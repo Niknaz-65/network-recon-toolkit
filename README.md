@@ -1,47 +1,28 @@
 # Network Recon Toolkit – Automated Nmap Reporting
 
 ## Overview
-Python-based network reconnaissance tool that wraps Nmap to automate service discovery and generate analyst-ready HTML and CSV reports.  
-The project supports SOC and security operations by standardizing reconnaissance output for investigation, validation, and handoff.
+Python-based reconnaissance toolkit that automates Nmap scanning, parses results, and generates analyst-ready HTML and CSV reports.  
+Designed to support SOC investigations, validation, and escalation by standardizing network reconnaissance output.
 
-## Why This Project Matters to SOC Teams
-- Accelerates reconnaissance during investigations and incident response
-- Produces consistent, readable reports for analyst review and escalation
-- Supports vulnerability assessment and network visibility without manual parsing
-
-## Environment
-- OS: Linux / macOS / Windows
+## Environment / Tools
+- OS: Linux, macOS, Windows
 - Tools: Python 3.8+, Nmap
-- Data Sources: Nmap scan results (TCP/UDP, service detection, OS fingerprinting)
+- Data Sources: Nmap TCP/UDP scans, service detection, OS fingerprinting
 - Frameworks: SOC investigation workflow
 
-## Data Collected / Artifacts
-- Open ports and exposed services
-- Service versions and banners
-- OS fingerprinting results
-- Network host availability
-- Scan timestamps and metadata
-
-## Detection Logic / Analysis Steps
-1. Executed Nmap scans using predefined profiles (quick or full)
-2. Performed TCP service discovery with optional UDP scanning
-3. Applied timing and rate controls for scan optimization
-4. Parsed Nmap XML output using Python
-5. Generated structured reports for analyst consumption
-
-## Findings
-- Identified active hosts and exposed services across target networks
-- Generated clean HTML reports for rapid review
+## Results / Findings (SOC Notes)
+- Identified active hosts and exposed TCP/UDP services across target networks
+- Extracted service versions and banners for vulnerability and risk assessment
+- Generated structured HTML reports for rapid analyst review
 - Produced CSV output suitable for tracking, comparison, or SIEM enrichment
+- Preserved raw Nmap XML for validation and follow-on analysis
 
-## Outcome
-- Reconnaissance workflow automated and standardized
-- Reduced manual effort during investigations
-- Reports suitable for escalation, documentation, or follow-on scanning
+## Architecture
+Target Network → Nmap Scan Profiles → Python Parser → HTML / CSV Reports
 
-## Evidence
+## Validation Evidence
 - Sample HTML and CSV reports stored in `/reports`
-- Raw Nmap XML retained for validation
+- Raw Nmap XML retained for verification and reprocessing
 
 ## Repository Structure
 ```text
