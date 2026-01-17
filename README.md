@@ -15,20 +15,17 @@ Designed to support SOC investigations, validation, and escalation by standardiz
 - Extracted service versions and banners for vulnerability and risk assessment
 - Generated structured HTML reports for rapid analyst review
 - Produced CSV output suitable for tracking, comparison, or SIEM enrichment
-- Preserved raw Nmap XML for validation and follow-on analysis
+- Retained raw Nmap XML for validation, correlation, and follow-on analysis
 
 ## Architecture
 Target Network → Nmap Scan Profiles → Python Parser → HTML / CSV Reports
-
-## Validation Evidence
-- Sample HTML and CSV reports stored in `/reports`
-- Raw Nmap XML retained for verification and reprocessing
 
 ## Repository Structure
 ```text
 /reports        → generated scan reports (HTML, CSV, XML)
 recon.py        → main reconnaissance script
 README.md       → project documentation
+```
 
 ## Usage
 ```bash
@@ -38,7 +35,7 @@ cd network-recon-toolkit
 # Quick TCP scan
 python3 recon.py 192.168.1.10
 
-# Full scan profile with rate tuning
+# Full scan profile
 python3 recon.py 10.0.0.0/24 --profile full -t 4 --rate 500
 
 # Include UDP scanning
