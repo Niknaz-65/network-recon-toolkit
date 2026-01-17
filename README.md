@@ -40,6 +40,7 @@ python3 recon.py 10.0.0.0/24 --profile full -t 4 --rate 500
 
 # Include UDP scanning
 python3 recon.py 192.168.1.10 --udp
+```
 
 ## Author
 **Niknaz Sadehvandi**  
