@@ -20,6 +20,10 @@ Designed to support SOC investigations, validation, and escalation by standardiz
 ## Architecture
 Target Network → Nmap Scan Profiles → Python Parser → HTML / CSV Reports
 
+## Report
+
+- [Network_Reconnaissance_and_SOC_Automation_Nmap_Reporting.pdf](Network_Reconnaissance_and_SOC_Automation_Nmap_Reporting.pdf)
+
 ## Repository Structure
 ```text
 /reports        → generated scan reports (HTML, CSV, XML)
